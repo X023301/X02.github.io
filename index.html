@@ -2,183 +2,51 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Desktop-Style Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Eine desktop-ähnliche Layout-Demo mit Platzhalterbildern." />
-  <link rel="preconnect" href="https://via.placeholder.com">
+  <title>Retro Desktop</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Topbar -->
-  <header class="topbar" role="banner">
-    <div class="topbar__inner container">
-      <div class="brand">
-        <div class="brand__logo" aria-hidden="true">⌘</div>
-        <span class="brand__name">DeskSite</span>
+  <!-- Desktop -->
+  <div class="desktop">
+    <!-- Fenster -->
+    <div class="window" style="top: 80px; left: 120px; width: 400px;">
+      <div class="window__titlebar">
+        <span class="window__title">Projekt Explorer</span>
+        <div class="window__controls">
+          <button class="btn">_</button>
+          <button class="btn">□</button>
+          <button class="btn">X</button>
+        </div>
       </div>
-
-      <nav class="nav" aria-label="Hauptnavigation">
-        <a href="#" class="nav__link is-active">Übersicht</a>
-        <a href="#" class="nav__link">Projekte</a>
-        <a href="#" class="nav__link">Team</a>
-        <a href="#" class="nav__link">Berichte</a>
-      </nav>
-
-      <form class="search" role="search" aria-label="Suche">
-        <input type="search" class="search__input" placeholder="Suchen…" />
-      </form>
-
-      <button class="btn btn--primary">Anmelden</button>
+      <div class="window__content">
+        <p>Dies ist ein Retro-Fenster mit Inhalt.</p>
+        <img src="https://via.placeholder.com/300x150.png?text=Bild" alt="Platzhalterbild" />
+      </div>
     </div>
-  </header>
 
-  <!-- App Shell -->
-  <div class="shell container">
-    <!-- Sidebar -->
-    <aside class="sidebar" aria-label="Seitenleiste">
-      <div class="panel user">
-        <img src="https://via.placeholder.com/96x96.png?text=User" alt="Benutzeravatar" class="user__avatar" />
-        <div class="user__meta">
-          <strong>Alex Beispiel</strong>
-          <span class="muted">Produktmanager</span>
+    <div class="window" style="top: 200px; left: 260px; width: 300px;">
+      <div class="window__titlebar">
+        <span class="window__title">Notepad</span>
+        <div class="window__controls">
+          <button class="btn">_</button>
+          <button class="btn">□</button>
+          <button class="btn">X</button>
         </div>
-        <a href="#" class="btn btn--ghost">Profil öffnen</a>
       </div>
-
-      <div class="panel">
-        <h3 class="panel__title">Schnellzugriff</h3>
-        <ul class="list">
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Kalender</a></li>
-          <li><a href="#">Dateien</a></li>
-          <li><a href="#">Einstellungen</a></li>
-        </ul>
+      <div class="window__content">
+        <p>Hallo Welt! Dies ist ein Textfenster.</p>
       </div>
-
-      <div class="panel">
-        <h3 class="panel__title">Status</h3>
-        <ul class="stats">
-          <li><span>Offene Tasks</span><strong>12</strong></li>
-          <li><span>Meilensteine</span><strong>3</strong></li>
-          <li><span>Nachrichten</span><strong>5</strong></li>
-        </ul>
-      </div>
-    </aside>
-
-    <!-- Main -->
-    <main class="main" role="main">
-      <!-- Hero -->
-      <section class="hero">
-        <img
-          class="hero__img"
-          src="https://via.placeholder.com/1600x420.png?text=Hero+Bild"
-          alt="Großer Banner mit Platzhalterbild" />
-        <div class="hero__content">
-          <h1>Willkommen zurück 👋</h1>
-          <p class="muted">Hier ist deine Übersicht – Projekte, Aktivitäten und Reports auf einen Blick.</p>
-          <div class="hero__cta">
-            <a href="#" class="btn btn--primary">Neues Projekt</a>
-            <a href="#" class="btn btn--ghost">Zu den Aufgaben</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Grid Cards -->
-      <section class="section">
-        <div class="section__head">
-          <h2>Aktuelle Projekte</h2>
-          <a href="#" class="link">Alle ansehen →</a>
-        </div>
-
-        <div class="grid">
-          <!-- Card 1 -->
-          <article class="card">
-            <img src="https://via.placeholder.com/600x360.png?text=Projekt+Bild" alt="Projektbild" class="card__media" />
-            <div class="card__body">
-              <h3 class="card__title">Website Relaunch</h3>
-              <p class="card__text">Neues Designsystem, bessere Performance, bessere UX.</p>
-            </div>
-            <div class="card__footer">
-              <span class="badge">In Arbeit</span>
-              <button class="btn btn--small">Öffnen</button>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="card">
-            <img src="https://via.placeholder.com/600x360.png?text=Projekt+Bild" alt="Projektbild" class="card__media" />
-            <div class="card__body">
-              <h3 class="card__title">Mobile App v2</h3>
-              <p class="card__text">Neue Features und verbesserte Onboarding-Strecke.</p>
-            </div>
-            <div class="card__footer">
-              <span class="badge badge--success">Live</span>
-              <button class="btn btn--small">Öffnen</button>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="card">
-            <img src="https://via.placeholder.com/600x360.png?text=Projekt+Bild" alt="Projektbild" class="card__media" />
-            <div class="card__body">
-              <h3 class="card__title">Analytics Setup</h3>
-              <p class="card__text">Tracking, Dashboards und KPI-Definition.</p>
-            </div>
-            <div class="card__footer">
-              <span class="badge badge--warning">Review</span>
-              <button class="btn btn--small">Öffnen</button>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="card">
-            <img src="https://via.placeholder.com/600x360.png?text=Projekt+Bild" alt="Projektbild" class="card__media" />
-            <div class="card__body">
-              <h3 class="card__title">Marketing Assets</h3>
-              <p class="card__text">Kampagnenvisuals, Landingpages und E-Mail-Templates.</p>
-            </div>
-            <div class="card__footer">
-              <span class="badge">In Arbeit</span>
-              <button class="btn btn--small">Öffnen</button>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Table-like List -->
-      <section class="section">
-        <div class="section__head">
-          <h2>Letzte Aktivitäten</h2>
-          <a href="#" class="link">Protokoll öffnen →</a>
-        </div>
-
-        <div class="table">
-          <div class="table__row table__row--head">
-            <div>Datum</div><div>Aktion</div><div>Projekt</div><div>Status</div>
-          </div>
-          <div class="table__row">
-            <div>21.08.2025</div><div>Ticket erstellt</div><div>Relaunch</div><div><span class="dot dot--info"></span> Offen</div>
-          </div>
-          <div class="table__row">
-            <div>20.08.2025</div><div>Kommentar</div><div>Mobile App</div><div><span class="dot dot--success"></span> Done</div>
-          </div>
-          <div class="table__row">
-            <div>19.08.2025</div><div>Datei hochgeladen</div><div>Analytics</div><div><span class="dot dot--warning"></span> Review</div>
-          </div>
-        </div>
-      </section>
-    </main>
+    </div>
   </div>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <span class="muted">© 2025 DeskSite</span>
-      <nav class="footer__nav" aria-label="Fußzeile">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-        <a href="#">Kontakt</a>
-      </nav>
+  <!-- Taskleiste -->
+  <div class="taskbar">
+    <button class="start-btn">Start</button>
+    <div class="taskbar__apps">
+      <div class="task">Projekt Explorer</div>
+      <div class="task">Notepad</div>
     </div>
-  </footer>
+    <div class="clock">12:34</div>
+  </div>
 </body>
 </html>
