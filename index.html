@@ -2,35 +2,47 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Retro Desktop Web</title>
+  <title>Retro Desktop</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="screen">
+    <!-- Ein Desktop-Icon -->
     <div class="icons">
-      <div class="icon">videos</div>
-      <div class="icon">contact</div>
-      <div class="icon">gallery</div>
-      <div class="icon">merch</div>
-      <div class="icon">patreon</div>
-      <div class="icon">terminal</div>
-      <div class="icon">syllabus</div>
-      <div class="icon">brochure.pdf</div>
-      <div class="icon">security</div>
-      <div class="icon">safe space</div>
-      <div class="icon">recycle bin</div>
+      <div class="icon" id="helloIcon">📁<br/>Hallo</div>
     </div>
 
-    <div class="footer-text">
-      site dreamt + built by lowercase 5:59 AM<br/>
-      Copyright (C) 2024 – Infinity<br/>
-      Hardware: MMX2 In Collaboration With: FaceGoog, Inc.<br/>
-      [binär & Statustexte…]
+    <!-- Fenster (zuerst versteckt) -->
+    <div class="window" id="helloWindow">
+      <div class="window__titlebar">
+        <span class="window__title">Nachricht</span>
+        <div class="window__controls">
+          <button class="btn" id="closeBtn">X</button>
+        </div>
+      </div>
+      <div class="window__content">
+        <p>Hallo 👋</p>
+      </div>
     </div>
 
+    <!-- Taskleiste -->
     <div class="start-bar">
       <div class="start-button">Start</div>
     </div>
   </div>
+
+  <script>
+    const helloIcon = document.getElementById("helloIcon");
+    const helloWindow = document.getElementById("helloWindow");
+    const closeBtn = document.getElementById("closeBtn");
+
+    helloIcon.addEventListener("click", () => {
+      helloWindow.style.display = "block";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      helloWindow.style.display = "none";
+    });
+  </script>
 </body>
 </html>
