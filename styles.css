@@ -1,11 +1,12 @@
 body {
   margin: 0;
-  background: #008080;
+  background: teal;
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   color: #000;
   height: 100vh;
 }
 
+/* Desktop */
 .screen {
   position: relative;
   width: 100%;
@@ -13,19 +14,17 @@ body {
   padding: 10px;
 }
 
+/* Icons */
 .icons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 100px;
   gap: 12px;
-  margin-bottom: 100px;
 }
-
 .icon {
   width: 100px;
   height: 80px;
   background: #c0c0c0;
-  border: 2px solid #fff;
-  box-shadow: 2px 2px 0 #808080 inset, -2px -2px 0 #fff inset;
+  border: 2px outset #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,22 +33,50 @@ body {
   cursor: pointer;
 }
 .icon:active {
-  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #fff;
+  border: 2px inset #fff;
 }
 
-.footer-text {
+/* Fenster */
+.window {
   position: absolute;
-  bottom: 30px;
-  left: 10px;
+  top: 100px;
+  left: 150px;
+  width: 200px;
+  background: silver;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #fff inset, -2px -2px 0 #808080 inset;
+  display: none; /* am Anfang unsichtbar */
+}
+.window__titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: navy;
+  color: white;
+  padding: 2px 6px;
+  font-weight: bold;
+}
+.window__controls .btn {
   font-size: 12px;
-  line-height: 1.3;
+  padding: 0 6px;
+  border: 2px outset #fff;
+  background: #c0c0c0;
+  cursor: pointer;
+}
+.window__controls .btn:active {
+  border: 2px inset #fff;
+}
+.window__content {
+  padding: 8px;
+  background: #c0c0c0;
+  border-top: 2px solid #808080;
 }
 
+/* Taskbar */
 .start-bar {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   height: 30px;
   background: #c0c0c0;
   border-top: 2px solid #fff;
@@ -57,7 +84,6 @@ body {
   align-items: center;
   padding: 0 10px;
 }
-
 .start-button {
   background: #c0c0c0;
   border: 2px outset #fff;
